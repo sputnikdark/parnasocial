@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Xmind";
+  src: url("../assets/Xmind/Xmind-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../assets/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../assets/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Xmind", "DM Sans", sans-serif;
+}
+
+.header {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 38px;
+  padding: 8px;
+  box-sizing: border-box;
+  -webkit-app-region: drag;
+  overflow: hidden;
+}
+.header .iconp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 24px;
+}
+.header .iconp .icon {
+  height: 20px;
+  width: 20px;
+}
+.header .iconp h1 {
+  font-family: "Bricolage Grotesque", "Xmind", "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 4px;
+  font-variation-settings: "wght" 700, "wdth" 100, "opsz" 12;
+}
+
+.grad {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: radial-gradient(circle at calc(0% + 64px) 0px, #DCF2FF 0%, #FFFFFF 20%);
+  z-index: -1;
+}
+
+/*# sourceMappingURL=style.css.map */
