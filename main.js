@@ -8,7 +8,7 @@ const APP_NAME = 'Parnasocial';
 const PRELOAD_PATH = path.join(__dirname, 'preload.js');
 const INDEX_PATH = path.join(__dirname, 'public', 'index.html');
 const ICON_PATH = path.join(__dirname, 'assets', 'Parnasocial.svg');
-const WINDOW_CONTROLS_HEIGHT = 32;
+const WINDOW_CONTROLS_HEIGHT = 38;
 
 const ALLOWED_PERMISSIONS = new Set([
     'clipboard-read',
@@ -135,12 +135,12 @@ function createWindow() {
         show: false,
         title: APP_NAME,
         icon: ICON_PATH,
-        backgroundColor: '#101010',
+        backgroundColor: '#f9f9f9',
         thickFrame: true,
         titleBarStyle: 'hidden',
         titleBarOverlay: {
-            color: '#101010',
-            symbolColor: '#f3f3f3',
+            color: '#f9f9f9',
+            symbolColor: '#101010',
             height: WINDOW_CONTROLS_HEIGHT
         },
         webPreferences: {
