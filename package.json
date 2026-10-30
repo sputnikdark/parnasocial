@@ -1,0 +1,103 @@
+{
+  "name": "parnasocial",
+  "productName": "Parnasocial",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "main.js",
+  "description": "Simple code editor",
+  "author": {
+    "name": "vexikoff"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "electron",
+    "windows",
+    "editor",
+    "code-editor",
+    "desktop",
+    "parnasocial",
+    "monaco"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --inspect",
+    "pack": "electron-builder --dir --win",
+    "dist": "electron-builder --win",
+    "build": "electron-builder --win",
+    "build:win": "electron-builder --win",
+    "dist:win": "electron-builder --win",
+    "install-app-deps": "electron-builder install-app-deps",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "xyz.vexikoff.parnasocial",
+    "productName": "Parnasocial",
+    "copyright": "Copyright © 2026 vexikoff",
+    "asar": true,
+    "compression": "maximum",
+    "forceCodeSigning": false,
+    "artifactName": "${productName}-${version}-${arch}-${os}.${ext}",
+    "directories": {
+      "output": "release/${version}"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "public/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "main.js"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "executableName": "Parnasocial",
+      "requestedExecutionLevel": "asInvoker",
+      "publisherName": "Parnasocial"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Parnasocial",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": {
+      "artifactName": "${productName}-portable-${version}.${ext}"
+    },
+    "publish": []
+  }
+}
