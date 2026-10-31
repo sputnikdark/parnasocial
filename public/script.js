@@ -7,6 +7,9 @@ if (yaebalneironki !== '0' && yaebalneironki !== '1') {
 
 function aplittheme() {
     document.documentElement.setAttribute('data-theme', yaebalneironki);
+    if (window.parnasocial && typeof window.parnasocial.changeth === 'function') {
+        window.parnasocial.changeth(yaebalneironki === '1' ? 'dark' : 'light');
+    }
 }
 
 function saveth(theme) {

@@ -265,13 +265,19 @@ if (process.platform !== 'win32') {
 }
 
 ipcMain.on('themechang', (event, theme) => {
-    if (theme === 'dark') {
-        win.setTitleBarOverlay({
+    const window = getTrustedWindow(event);
+
+    if (!window || window.isDestroyed()) {
+        return;
+    }
+
+    if (theme === 'dark' || theme === '1') {
+        window.setTitleBarOverlay({
             color: '#101010',
             symbolColor: '#f9f9f9'
         });
     } else {
-        win.setTitleBarOverlay({
+        window.setTitleBarOverlay({
             color: '#ffffff',
             symbolColor: '#101010'
         });
